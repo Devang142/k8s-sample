@@ -17,7 +17,7 @@ before_install:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build -t dev942/reac-test -f ./client/Dockerfile.dev ./client
 script:
-  - docker run dev942/reac-test npm test -- --coverage
+  - docker run -e CI=true dev942/reac-test npm test -- --coverage
 deploy:
   provider: script
   script: bash ./deploy.sh
