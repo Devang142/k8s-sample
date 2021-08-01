@@ -11,7 +11,7 @@ function App() {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1>Kubernetes version of FIB calculator</h1>
+          <h1>Kubernetes version of FIB calculator - updated on 01/08/2021</h1>
           <a
             className="App-link"
             href="https://reactjs.org"
