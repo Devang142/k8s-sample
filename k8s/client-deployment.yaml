@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: client
-          image: dev942/multi-client
+          image: gcr.io/k8s-sample-320905/multi-client
           ports:
             - containerPort: 3000
