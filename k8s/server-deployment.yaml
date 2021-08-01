@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: server
-          image: dev942/multi-server
+          image: gcr.io/k8s-sample-320905/multi-server
           ports:
             - containerPort: 5000
           env:

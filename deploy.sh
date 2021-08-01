@@ -1,10 +1,10 @@
-docker build -t dev942/multi-client -f ./client/Dockerfile ./client
-docker build -t dev942/multi-server -f ./server/Dockerfile ./server
-docker build -t dev942/multi-worker -f ./worker/Dockerfile ./worker
+docker build -t gcr.io/k8s-sample-320905/multi-client -f ./client/Dockerfile ./client
+docker build -t gcr.io/k8s-sample-320905/multi-server -f ./server/Dockerfile ./server
+docker build -t gcr.io/k8s-sample-320905/multi-worker -f ./worker/Dockerfile ./worker
 
-docker push dev942/multi-client
-docker push dev942/multi-server
-docker push dev942/multi-worker
+docker push gcr.io/k8s-sample-320905/multi-client
+docker push gcr.io/k8s-sample-320905/multi-server
+docker push gcr.io/k8s-sample-320905/multi-worker
 
 kubectl apply -f k8s
 
