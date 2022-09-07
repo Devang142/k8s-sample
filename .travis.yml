@@ -4,10 +4,23 @@ env:
   global:
     - KS_REGISTRY_HOST="artifactory.swg-devops.com"
     - KS_REGISTRY_REPO="dbg-m-symposium-docker-local"
-    - SECURITY_SCAN=false
+    - SECURITY_SCAN=yes
 
-script:
-  - echo "Devang test"
+jobs:
+  include:
+  - if: env(SECURITY_SCAN) != yes
+    name: Automation scripts
+    language: node_js
+    node_js: 16
+    cache: npm
+    script: echo "Automation scripts"
+  - if: env(SECURITY_SCAN) = yes
+    name: Security scan
+    language: python
+    python: 
+      - 3.7
+    script: echo "Security scan"
+      
 # sudo: required
 # services:
 #   - docker
