@@ -4,6 +4,7 @@ env:
   global:
     - KS_REGISTRY_HOST="artifactory.swg-devops.com"
     - KS_REGISTRY_REPO="dbg-m-symposium-docker-local"
+    - SECURITY_SCAN=false
 
 script:
   - echo "Devang test"
