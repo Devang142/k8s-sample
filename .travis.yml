@@ -20,8 +20,9 @@ jobs:
     python: 
       - 3.7
     script:
-      - echo "new good changes"
+      - echo "new good changes $SEC_COMP_GITHUB_TOKEN"
       - "curl --location --request GET \"https://api.github.ibm.com/repos/symposium/scripts/tarball/archive/devang-security-scan-script\" --header \"Accept: application/vnd.github+json\" --header \"Authorization: Bearer $SEC_COMP_GITHUB_TOKEN\" > scripts.tar.gz"
+      - ls
       - tar -x -f ./scripts.tar.gz
       
 # sudo: required
