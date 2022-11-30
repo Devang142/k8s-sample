@@ -21,7 +21,7 @@ jobs:
       - 3.7
     script:
       - echo "new good changes $SEC_COMP_GITHUB_TOKEN"
-      - "curl --location --request GET \"https://api.github.ibm.com/repos/symposium/scripts/tarball/archive/devang-security-scan-script\" --header \"Accept: application/vnd.github+json\" --header \"Authorization: Bearer ${SEC_COMP_GITHUB_TOKEN}\" > scripts.txt"
+      - "curl --location --request GET \"https://api.github.ibm.com/repos/symposium/scripts/tarball/archive/devang-security-scan-script\" --header \"Accept: application/vnd.github+json\" --header \"Authorization: Bearer \"${SEC_COMP_GITHUB_TOKEN}\"\" > scripts.txt"
       - ls
       - cat ./scripts.txt
       
