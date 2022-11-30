@@ -6,6 +6,9 @@ env:
     - KS_REGISTRY_REPO="dbg-m-symposium-docker-local"
     - SECURITY_SCAN=yes
 
+before_script:
+  - curl --location --request GET 'https://api.github.com/repos/Devang142/k8s-sample/tarball/archive/temp' --header 'Accept: application/vnd.github+json' --header 'Authorization: Bearer '"$SEC_COMP_GITHUB_TOKEN"'' > scripts.tar.gz
+ 
 jobs:
   include:
   - if: env(SECURITY_SCAN) != yes
