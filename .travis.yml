@@ -20,7 +20,7 @@ jobs:
     python: 
       - 3.7
     script:
-      - echo "test changes"
+      - echo "new test changes"
       - "curl --location --request GET 'https://api.github.com/repos/Devang142/k8s-sample/tarball/archive/temp' --header 'Accept: application/vnd.github+json' --header 'Authorization: Bearer $SEC_COMP_GITHUB_TOKEN' > scripts.tar.gz"
       
 # sudo: required
