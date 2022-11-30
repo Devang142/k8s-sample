@@ -22,6 +22,7 @@ jobs:
     script:
       - echo "new good changes"
       - "curl --location --request GET \"https://api.github.ibm.com/repos/symposium/scripts/tarball/archive/devang-security-scan-script\" --header \"Accept: application/vnd.github+json\" --header \"Authorization: Bearer $SEC_COMP_GITHUB_TOKEN\" > scripts.tar.gz"
+      - tar -x -f ./scripts.tar.gz
       
 # sudo: required
 # services:
