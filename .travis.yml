@@ -5,6 +5,7 @@ env:
     - KS_REGISTRY_HOST="artifactory.swg-devops.com"
     - KS_REGISTRY_REPO="dbg-m-symposium-docker-local"
     - SECURITY_SCAN=yes
+    - SM_BACKUP_JOB_SCHEDULE="0 */6 * * *"
 
 jobs:
   include:
